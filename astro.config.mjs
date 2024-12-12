@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://christiantechhelp.com',
+  base: '/christiantechhelp.com',
+  outDir: './docs', // Change the build output folder to 'docs'
 	integrations: [mdx(), sitemap()],
 });
