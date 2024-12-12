@@ -83,6 +83,11 @@ a {
 a:hover {
 	color: var(--accent);
 }
+.phonenumber {
+  color: black;
+  font-size: 40px;
+  text-decoration: none;
+}
 p {
 	margin-bottom: 1em;
 }
