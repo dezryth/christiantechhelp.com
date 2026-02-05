@@ -8,12 +8,11 @@ import { SITE_TITLE } from '../consts';
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
+			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="social-links">
 			<a href="https://twitter.com/scottrchristian" target="_blank">
-				<span class="sr-only">Follow me on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -23,7 +22,6 @@ import { SITE_TITLE } from '../consts';
 			</a>
 
 			<a href="https://github.com/dezryth" target="_blank">
-				<span class="sr-only">Go to my GitHub repo</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
 						fill="currentColor"
@@ -38,7 +36,9 @@ import { SITE_TITLE } from '../consts';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
+		background: rgba(10, 10, 26, 0.9);
+		backdrop-filter: blur(20px);
+		border-bottom: 1px solid rgba(255,255,255,0.1);
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 	h2 {
@@ -57,7 +57,7 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: #f8fafc;
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}

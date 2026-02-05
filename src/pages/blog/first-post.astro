@@ -1,0 +1,47 @@
+--- 
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Fixing Slow WiFi - Blog" description="Step-by-step WiFi speed fix" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>Fixing Slow WiFi: Step-by-Step Guide</h1>
+				<pubDate>2026-02-04</pubDate>
+				<p>Slow WiFi ruining your day? Here's how to diagnose & fix (no tech degree needed).</p>
+				<h2>Common Causes of Slow Wi-Fi</h2>
+				<ul>
+					<li><strong>Outdated router:</strong> Can't handle Wi-Fi 6/5GHz.</li>
+					<li><strong>Too many devices:</strong> Network congestion.</li>
+					<li><strong>Bad position:</strong> Walls/interference (microwave, neighbors).</li>
+					<li><strong>ISP throttling:</strong> Test wired vs wireless.</li>
+					<li><strong>Old cables/drivers:</strong> Check Ethernet too.</li>
+				</ul>
+
+				<h2>Fix It Step-by-Step</h2>
+				<ol>
+					<li><strong>Restart modem/router/devices:</strong> Unplug 30s, power on modem first.</li>
+					<li><strong>Test speed:</strong> <a href="speedtest.net">speedtest.net</a>—compare to ISP plan.</li>
+					<li><strong>Optimize channel:</strong> Router app/admin (192.168.1.1) > WiFi > Scan & pick least crowded (1/6/11).</li>
+					<li><strong>Switch to 5GHz:</strong> Faster, less range—perfect for close devices.</li>
+					<li><strong>Reposition router:</strong> Central, high shelf, no metal/ microwave nearby.</li>
+					<li><strong>Update firmware:</strong> Router admin > Check updates.</li>
+					<li><strong>Prioritize devices:</strong> QoS settings for PC/TV over IoT.</li>
+					<li><strong>Upgrade hardware:</strong> Wi-Fi 6 router if >50 devices.</li>
+					<li><strong>Call pro:</strong> Can't DIY? ☎️ (469) 844-0493—quick $75/hr fix!</li>
+				</ol>
+
+				<p>Most fixed by #1-3. Test after each step. Persistent? Hardware or ISP issue.</p>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
