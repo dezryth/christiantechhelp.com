@@ -17,7 +17,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<img src="/CTHLogo-2-1024x908.jpg" alt="Christian Tech Help Logo" class="logo" />
 				<h1>Christian Tech Help</h1>
 				<p>Looking for help/advice with a technology related issue?</p>
-				<p>Welcome! I am accepting new clients. Please call today if you would like a quote.</p>
+				<p class="promo">Welcome! I am accepting new clients. Please call today if you would like a quote.</p>
 				<a href="tel:+14698440493" class="cta">☎️ Call Now (469) 844-0493</a>
 
 				<section class="book-consult">
@@ -77,6 +77,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<a href="tel:+14698440493" class="cta">☎️ (469) 844-0493</a>
 					</div>
 				</div>
+			</section>
+			<section class="testimonials" style="margin: 6rem 0;">
+				<h2 style="text-align: center; margin-bottom: 3rem;">What Clients Say</h2>
+				<div class="testimonials-carousel" style="display: flex; overflow: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; gap: 2rem; max-width: 800px; margin: 0 auto;">
+					<div class="testimonial-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 3rem 2.5rem; text-align: center; flex: 0 0 100%; scroll-snap-align: center; box-shadow: var(--shadow); backdrop-filter: blur(10px); min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+						<blockquote style="font-style: italic; font-size: 1.3em; color: var(--text-secondary); margin: 0 0 1.5rem 0; font-weight: 300;">&quot;Placeholder text for now!&quot;</blockquote>
+						<div class="author" style="font-weight: 600; font-size: 1.1em; color: var(--text-primary);">
+							<span aria-label="Woman" role="img" style="font-size: 2em; display: block; margin-bottom: 0.5rem;">👩</span>
+							Amy C.
+						</div>
+					</div>
+					<!-- Add more slides here for full carousel -->
+				</div>
+				<style>
+					.testimonials-carousel::-webkit-scrollbar { display: none; }
+					.testimonials-carousel { scrollbar-width: none; -ms-overflow-style: none; }
+					@media (min-width: 768px) {
+						.testimonials-carousel { gap: 3rem; }
+						.testimonial-card { max-width: 500px; }
+					}
+				</style>
 			</section>
 		</main>
 		<Footer />
