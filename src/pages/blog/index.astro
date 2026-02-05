@@ -2,7 +2,11 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
 import { SITE_TITLE } from '../../consts';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -16,29 +20,24 @@ import { SITE_TITLE } from '../../consts';
 			<h1>Blog</h1>
 			<h2>Recent Posts</h2>
 			<div class="posts-grid">
-				<a href="/blog/fixing-slow-wifi" class="post-card">
-					<img src="/CTHLogo-2-1024x908.jpg" alt="Fixing Slow WiFi" />
-					<div>
-						<h3>Fixing Slow WiFi</h3>
-						<p>Step-by-step troubleshoot for faster home network. (Feb 4)</p>
-					</div>
-				</a>
-				<a href="/blog/ai-tips" class="post-card">
-					<img src="/CTHLogo-2-1024x908.jpg" alt="AI Productivity" />
-					<div>
-						<h3>AI for Everyday Productivity</h3>
-						<p>Practical AI tips for work/home—no fluff. (Feb 4)</p>
-					</div>
-				</a>
+				{sortedPosts.map((post) => (
+					<a href={`/blog/${post.slug}/`} class="post-card">
+						<img src="/CTHLogo-2-1024x908.jpg" alt={post.data.title} />
+						<div>
+							<h3>{post.data.title}</h3>
+							<p>{post.data.description} ({new Date(post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })})</p>
+						</div>
+					</a>
+				))}
 			</div>
 			<p style="text-align: center; margin: 2em 0;">More coming—subscribe or ☎️ (469) 844-0493 for custom advice!</p>
 
-<div class="rss-subscribe" style="text-align: center; margin: 2em 0; padding: 1.5em; background: rgba(255,165,0,0.1); border-radius: 0.75rem; border: 1px solid rgba(255,165,0,0.3); display: inline-block;">
-  <a href="/rss.xml" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.75em; font-weight: 600; font-size: 1.1em;">
-    <img src="/rss-icon.png" alt="RSS Feed" width="28" height="28" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
-    Subscribe to my RSS Feed!
-  </a>
-</div>
+			<div class="rss-subscribe" style="text-align: center; margin: 2em 0; padding: 1.5em; background: rgba(255,165,0,0.1); border-radius: 0.75rem; border: 1px solid rgba(255,165,0,0.3); display: inline-block;">
+				<a href="/rss.xml" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 0.75em; font-weight: 600; font-size: 1.1em;">
+					<img src="/rss-icon.png" alt="RSS Feed" width="28" height="28" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">
+					Subscribe to my RSS Feed!
+				</a>
+			</div>
 
 			<style>
 				.posts-grid {
