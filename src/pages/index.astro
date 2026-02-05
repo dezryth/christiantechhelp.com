@@ -14,11 +14,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<section class="hero">
-				<img src="/CTHLogo-2-1024x908.png" alt="Christian Tech Help Logo" class="logo" />
+				<img src="/CTHLogo-2-1024x908.jpg" alt="Christian Tech Help Logo" class="logo" />
 				<h1>Christian Tech Help</h1>
 				<p>Looking for help/advice with a technology related issue?</p>
 				<p>Welcome! I am accepting new clients. Please call today if you would like a quote.</p>
 				<a href="tel:+14698440493" class="cta">☎️ Call Now (469) 844-0493</a>
+
+				<section class="book-consult">
+					<h2>Book a Free 15min Consult</h2>
+					<p>Get a quick quote or advice—no commitment.</p>
+					<div class="calendly-inline-widget" data-url="https://calendly.com/scott-codesilver/15-minute-tech-consult" style="min-width:320px;height:700px;"></div>
+					<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+					<style>
+						.book-consult { max-width: 900px; margin: 3em auto; text-align: center; }
+						.calendly-inline-widget { height: 900px; }
+						@media (max-width: 768px) { .calendly-inline-widget { height: 800px; } }
+					</style>
+				</section>
+
 			</section>
 
 			<section class="about-section">
