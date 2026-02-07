@@ -11,7 +11,9 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { title, description, image = '/CTHLogo-2-1024x908.jpg' } = Astro.props;
+const resolvedUrl = canonicalURL.toString();
+const resolvedImage = new URL(image, Astro.site ?? Astro.url).toString();
 
 const businessSchema = {
 	"@context": "https://schema.org",
@@ -19,7 +21,7 @@ const businessSchema = {
 	name: "Christian Tech Help",
 	url: Astro.site?.toString() ?? "https://christiantechhelp.com",
 	telephone: "+1-469-844-0493",
-	image: new URL(image, Astro.url).toString(),
+	image: resolvedImage,
 	areaServed: [
 		"Carrollton, TX",
 		"Addison, TX",
@@ -82,14 +84,19 @@ const businessSchema = {
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={resolvedUrl} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:site_name" content="Christian Tech Help" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content={resolvedImage} />
+<meta property="og:image:secure_url" content={resolvedImage} />
+<meta property="og:image:alt" content={title} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={resolvedUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={resolvedImage} />
+<meta name="twitter:image:alt" content={title} />
