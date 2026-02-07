@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Page.astro';
+
+const title = 'Contact Christian Tech Help';
+const description = 'Call or email for friendly tech support in Carrollton and the DFW Metroplex.';
+---
+<Layout title={title} description={description}>
+
+  <div class="logo-wrap">
+    <img src="/CTHLogo-2-1024x908.jpg" alt="Christian Tech Help Logo" class="logo" />
+  </div>
+
+  <p>Need help with a tech issue? Reach out and I’ll get back to you as soon as possible.</p>
+
+  <h2>Service area</h2>
+  <p>Carrollton and nearby cities across the DFW Metroplex.</p>
+
+  <h2>Call or text</h2>
+  <p><a href="tel:+14698440493">(469) 844‑0493</a></p>
+
+  <h2>Email</h2>
+  <p><a href="mailto:scott@christiantechhelp.com">scott@christiantechhelp.com</a></p>
+  
+  <div class="calendly-inline-widget" data-url="https://calendly.com/scott-codesilver/tech-support-consultation" style="min-width:320px;height:1000px;"></div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <style>
+    .calendly-inline-widget { height: 1000px; }
+    @media (max-width: 768px) { .calendly-inline-widget { height: 1000px; } }
+  </style>
+
+  <style>
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .logo {
+      width: min(280px, 70vw);
+      height: auto;
+    }
+  </style>
+</Layout>

@@ -12,6 +12,36 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+
+const businessSchema = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	name: "Christian Tech Help",
+	url: Astro.site?.toString() ?? "https://christiantechhelp.com",
+	telephone: "+1-469-844-0493",
+	image: new URL(image, Astro.url).toString(),
+	areaServed: [
+		"Carrollton, TX",
+		"Addison, TX",
+		"Farmers Branch, TX",
+		"Plano, TX",
+		"Dallas, TX",
+		"Irving, TX",
+		"Lewisville, TX",
+		"Coppell, TX",
+		"The Colony, TX",
+		"Richardson, TX",
+	],
+	serviceType: [
+		"Home tech support",
+		"Wi-Fi troubleshooting",
+		"Computer repair",
+		"Malware removal",
+		"Device setup",
+		"Data backup",
+	],
+	priceRange: "$$",
+};
 ---
 
 <!-- Global Metadata -->
@@ -34,6 +64,21 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+
+<!-- Local Business Schema -->
+<script type="application/ld+json" is:inline>
+	{JSON.stringify(businessSchema)}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X0G0KM72F2"></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-X0G0KM72F2');
+</script>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />

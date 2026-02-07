@@ -4,6 +4,12 @@ const today = new Date();
 
 <footer>
 	&copy; {today.getFullYear()} Scott Christian. All rights reserved.
+	<div class="footer-links">
+		<a href="/about">About</a>
+		<a href="/privacy-policy">Privacy</a>
+		<a href="/terms">Terms</a>
+		<a href="/disclaimer">Disclaimer</a>
+	</div>
 	<div class="social-links">
     <a href="https://twitter.com/scottrchristian" target="_blank">
       <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -36,6 +42,20 @@ const today = new Date();
 		justify-content: center;
 		gap: 1em;
 		margin-top: 1em;
+	}
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		gap: 1.25em;
+		margin-top: 0.75em;
+		flex-wrap: wrap;
+	}
+	.footer-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.footer-links a:hover {
+		color: rgb(var(--gray-dark));
 	}
 	.social-links a {
 		text-decoration: none;
