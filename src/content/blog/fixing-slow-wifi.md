@@ -1,33 +1,41 @@
 ---
 title: 'Fixing Slow WiFi'
 description: 'Step-by-step troubleshoot for faster home network.'
-pubDate: 2026-02-04
+pubDate: 2024-11-20
+heroImage: '/blog/fixing-slow-wifi.jpg'
 ---
 
-# Fixing Slow WiFi: Step-by-Step Guide
+Slow Wi‑Fi can make everything feel broken—video calls freeze, streaming buffers, and pages take forever. The good news: most issues are fixable with a few simple steps.
 
-Slow WiFi ruining your day? Here's how to diagnose & fix (no tech degree needed).
+## Common causes of slow Wi‑Fi
 
-## Common Causes of Slow Wi-Fi
+- **Outdated router**: Older gear can’t keep up with modern devices.
+- **Too many devices**: Smart TVs, phones, and tablets all share the same pipe.
+- **Bad placement**: Routers hidden in a closet or behind a TV lose signal fast.
+- **Interference**: Microwaves, neighbors, and thick walls can block Wi‑Fi.
+- **ISP issues**: Sometimes the internet company is the bottleneck.
 
-- **Outdated router**: Can't handle Wi-Fi 6/5GHz.
-- **Too many devices**: Network congestion.
-- **Bad position**: Walls/interference (microwave, neighbors).
-- **ISP throttling**: Test wired vs wireless.
-- **Old cables/drivers**: Check Ethernet too.
+## Step‑by‑step fixes (try in order)
 
-## Fix It Step-by-Step
+1. **Restart everything**: Unplug modem and router for 30 seconds. Plug in modem first, wait 60 seconds, then router.
+2. **Run a speed test**: Use [speedtest.net](https://www.speedtest.net). Compare results to your plan.
+3. **Move the router**: Put it high, central, and away from metal or thick walls.
+4. **Use the 5GHz network**: Faster for devices close to the router. 2.4GHz goes farther but is slower.
+5. **Update router firmware**: Usually in the router app or web admin page.
+6. **Check for congestion**: If your router has “channel” settings, switch to the least crowded one.
+7. **Limit background usage**: Large downloads can slow everyone else down.
 
-1. **Restart modem/router/devices**: Unplug 30s, power on modem first.
-2. **Test speed**: [speedtest.net](speedtest.net)—compare to ISP plan.
-3. **Optimize channel**: Router app/admin (192.168.1.1) > WiFi > Scan & pick least crowded (1/6/11).
-4. **Switch to 5GHz**: Faster, less range—perfect for close devices.
-5. **Reposition router**: Central, high shelf, no metal/ microwave nearby.
-6. **Update firmware**: Router admin > Check updates.
-7. **Prioritize devices**: QoS settings for PC/TV over IoT.
-8. **Upgrade hardware**: Wi-Fi 6 router if >50 devices.
-9. **Call pro**: Can't DIY? ☎️ (469) 844-0493—quick $75/hr fix!
+## When to upgrade
 
-Most fixed by #1-3. Test after each step. Persistent? Hardware or ISP issue.
+If your router is 5–7+ years old or you have dead zones, a **Wi‑Fi 6 router** or a **mesh system** can be a huge improvement.
 
-*Adapted from XDA Developers troubleshooting resources.*
+## Quick checklist
+
+- Modem and router power‑cycled
+- Router in a central, open location
+- 5GHz used for nearby devices
+- Firmware updated
+
+Need help troubleshooting or upgrading? I can test your setup and optimize it quickly.
+
+Call/text ☎️ (469) 844‑0493.

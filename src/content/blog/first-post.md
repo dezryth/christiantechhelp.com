@@ -1,7 +1,7 @@
 ---
 title: 'Welcome New & Potential Clients!'
 description: 'Welcome New & Potential Clients!'
-pubDate: 'Jul 06 2024'
+pubDate: 2024-07-06
 heroImage: '/CTHLogo-2-1024x908.png'
 ---
 Welcome New & Potential Clients!

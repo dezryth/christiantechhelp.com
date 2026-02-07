@@ -21,8 +21,8 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
 			<h2>Recent Posts</h2>
 			<div class="posts-grid">
 				{sortedPosts.map((post) => (
-					<a href={`/blog/${post.slug}/`} class="post-card">
-						<img src="/CTHLogo-2-1024x908.jpg" alt={post.data.title} />
+					<a href={`/blog/${post.id}/`} class="post-card">
+						<img src={post.data.heroImage ?? '/CTHLogo-2-1024x908.jpg'} alt={post.data.title} />
 						<div>
 							<h3>{post.data.title}</h3>
 							<p>{post.data.description} ({new Date(post.data.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })})</p>
